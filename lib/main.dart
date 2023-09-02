@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// import 'package:scan_and_generate_qr_code/pages/create_qr_code.dart';
-// import 'package:scan_and_generate_qr_code/pages/scan_qr_code.dart';
+import 'package:scan_and_generate_qr_code/features/generateQRcode/generate_qr_code.dart';
+import 'package:scan_and_generate_qr_code/features/scanQRcode/scan_qr_code.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
