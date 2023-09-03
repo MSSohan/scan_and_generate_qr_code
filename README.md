@@ -1,6 +1,9 @@
 # scan_and_generate_qr_code
 
-A new Flutter project.
+Let's build a Scan & Generate Barcode or QR Code App with Flutter. 
+
+- [Resources Create Barcode Plugin](https://pub.dev/packages/barcode_widget)
+- [Scan Barcode Plugin](https://pub.dev/packages/flutter_barcode_scanner)
 
 ## Getting Started
 
