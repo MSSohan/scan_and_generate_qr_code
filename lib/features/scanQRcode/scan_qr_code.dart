@@ -68,7 +68,7 @@ class _ScanQRCodeState extends State<ScanQRCode> {
                 style: TextStyle(fontSize: 20),
               ),
               ),
-            )
+            ),
           ],
         ),
       ),

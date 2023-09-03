@@ -29,7 +29,7 @@ class _CreateQRCodeState extends State<CreateQRCode> {
                 width: 200,
                 height: 200,
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Row(
                 children: [
                   Expanded(child: buildTextField(context)),
@@ -55,6 +55,7 @@ class _CreateQRCodeState extends State<CreateQRCode> {
       fontWeight: FontWeight.bold,
       fontSize: 20,
     ),
+    textAlign: TextAlign.center,
     decoration: InputDecoration(
       hintText: 'Enter the data',
       hintStyle: const TextStyle(color: Colors.grey),
@@ -68,8 +69,6 @@ class _CreateQRCodeState extends State<CreateQRCode> {
           color: Theme.of(context).primaryColor,
         ),
       ),
-      // Center-align the entered text
-      alignLabelWithHint: true, // Added this line
     ),
   );
 }
