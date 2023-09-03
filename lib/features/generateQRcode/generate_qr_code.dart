@@ -2,7 +2,7 @@ import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 
 class CreateQRCode extends StatefulWidget {
-  CreateQRCode({Key key}) : super(key: key);
+  CreateQRCode({Key? key}) : super(key: key);
 
   @override
   _CreateQRCodeState createState() => _CreateQRCodeState();
