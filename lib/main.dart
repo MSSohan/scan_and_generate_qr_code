@@ -46,30 +46,61 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
+
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (BuildContext context) => ScanQRCode()));
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
-                onPrimary: Colors.white,
-                padding: const EdgeInsets.all(10.0),
+              primary: Colors.transparent, // Make the button transparent
+              onPrimary: Colors.white,
+              padding: const EdgeInsets.all(10.0),
               ),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: <Color>[
+                      Color(0xFF0D47A1),
+                      Color(0xFF1976D2),
+                      Color(0xFF42A5F5),
+                    ],
+                  ),
+                  borderRadius: BorderRadius.circular(10.0), // Optional: Add rounded corners
+                ),
+                padding: const EdgeInsets.all(10.0),
               child: const Text('Scan QR Code', style: TextStyle(fontSize: 20)),
             ),
-            const SizedBox(height: 30),
+        ),
+
+            const SizedBox(height: 15),
+
+
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (BuildContext context) => CreateQRCode()));
-              },
+                },
               style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
+                primary: Colors.transparent, // Make the button transparent
                 onPrimary: Colors.white,
                 padding: const EdgeInsets.all(10.0),
+                ),
+              child: Container(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: <Color>[
+                        Color(0xFF0D47A1),
+                        Color(0xFF1976D2),
+                        Color(0xFF42A5F5),
+                      ],
+                    ),
+                    borderRadius: BorderRadius.circular(10.0), // Optional: Add rounded corners
+                  ),
+                  padding: const EdgeInsets.all(10.0),
+                child: const Text('Generate QR Code', style: TextStyle(fontSize: 20)),
               ),
-              child: const Text('Generate QR Code', style: TextStyle(fontSize: 20)),
             ),
           ],
         ),
