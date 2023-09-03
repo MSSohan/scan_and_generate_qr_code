@@ -2,7 +2,7 @@ import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 
 class CreateQRCode extends StatefulWidget {
-  CreateQRCode({Key? key}) : super(key: key);
+  const CreateQRCode({Key? key}) : super(key: key);
 
   @override
   _CreateQRCodeState createState() => _CreateQRCodeState();
@@ -16,7 +16,7 @@ class _CreateQRCodeState extends State<CreateQRCode> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Create QR Code'),
+          title: const Text('Create QR Code'),
         ),
         body: Center(
           child: Column(
@@ -36,7 +36,7 @@ class _CreateQRCodeState extends State<CreateQRCode> {
                   const SizedBox(width: 12),
                   FloatingActionButton(
                     backgroundColor: Theme.of(context).primaryColor,
-                    child: Icon(Icons.done, size: 30),
+                    child: const Icon(Icons.done, size: 30),
                     onPressed: () => setState(() {}),
                   )
                 ],
@@ -50,17 +50,17 @@ class _CreateQRCodeState extends State<CreateQRCode> {
 
   Widget buildTextField(BuildContext context) => TextField(
     controller: controller,
-    style: TextStyle(
+    style: const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.bold,
       fontSize: 20,
     ),
     decoration: InputDecoration(
       hintText: 'Enter the data',
-      hintStyle: TextStyle(color: Colors.grey),
+      hintStyle: const TextStyle(color: Colors.grey),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
-        borderSide: BorderSide(color: Colors.white),
+        borderSide: const BorderSide(color: Colors.white),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
@@ -68,6 +68,8 @@ class _CreateQRCodeState extends State<CreateQRCode> {
           color: Theme.of(context).primaryColor,
         ),
       ),
+      // Center-align the entered text
+      alignLabelWithHint: true, // Added this line
     ),
   );
 }

@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class ScanQRCode extends StatefulWidget {
-  ScanQRCode({Key? key}) : super(key: key);
+  const ScanQRCode({Key? key}) : super(key: key);
 
   @override
   _ScanQRCodeState createState() => _ScanQRCodeState();
