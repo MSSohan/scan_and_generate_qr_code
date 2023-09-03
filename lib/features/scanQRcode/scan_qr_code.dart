@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class ScanQRCode extends StatefulWidget {
-  ScanQRCode({Key key}) : super(key: key);
+  ScanQRCode({Key? key}) : super(key: key);
 
   @override
   _ScanQRCodeState createState() => _ScanQRCodeState();
@@ -24,33 +24,37 @@ class _ScanQRCodeState extends State<ScanQRCode> {
           children: [
             Text(
               qrCode,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 16,
                   color: Colors.white60,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            Text(
+            const Text(
               '---',
               style: TextStyle(
                   fontSize: 16,
                   color: Colors.white60,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed: () {
                 scanQrCode();
               },
-              textColor: Colors.white,
-              color: Colors.blue,
-              padding: const EdgeInsets.all(10.0),
-              child: const Text('  Strat Scanning    ',
-                  style: TextStyle(fontSize: 20)),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.blue,
+                onPrimary: Colors.white,
+                padding: const EdgeInsets.all(10.0),
+              ),
+              child: const Text(
+                'Start Scanning',
+                style: TextStyle(fontSize: 20),
+              ),
             )
           ],
         ),
